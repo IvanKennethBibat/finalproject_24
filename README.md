@@ -16,3 +16,12 @@ distilBERT model: https://huggingface.co/distilbert/distilbert-base-uncased
 
 The requirements.txt file allows for the installation of the required dependencies for the project. The following code will install the dependencies by typing the following into the Anaconda Prompt:
 pip install -r requirements.txt
+
+### Data Scraping
+The data used in this project is retrieved by running the scraper.py file with the filter 'iPhone 15', identifying Reddit posts containing the keyword 'iPhone 15'. These entries are then appended into a .csv file.
+
+The dataset is then put through preprocessing.ipynb, then through augmentation.ipynb, which performs preprocessing, cleaning and augmentation of the dataset. The data is outputted into a .csv file that is then put through into VADER.ipynb, which performs classification.
+
+
+### Model Training
+Each model takes in the cleaned, augmented, and labelled dataset, which is split into 3 subsets: training, validation, subset. These subsets are then used to train the model, validate the training, and then testing the model.
